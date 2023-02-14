@@ -1,7 +1,7 @@
 .header {
     width: 100%;
     position: fixed;
-    background-color: black;
+    background: linear-gradient(#1A1C45, #161CAC);
     z-index: 1000;
     display: flex;
     justify-content: space-around;
@@ -10,6 +10,13 @@
 
 .TitleName {
     color: white;
+}
+
+.TitleName h1 {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    font-size: 25px;
 }
 
 .header_container {
@@ -46,7 +53,7 @@ ul.main-menu {
     z-index: 7;
 }
 
-ul.main-menu > li.menu-item:first-child {
+ul.main-menu>li.menu-item:first-child {
     padding-left: 0;
     margin-left: 0;
 }
@@ -73,9 +80,11 @@ ul.main-menu > li.menu-item:first-child {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
+
 .login_curose:hover {
     cursor: pointer;
 }
+
 @media (max-width: 996px) {
     .header {
         padding: 0.5rem 0;
@@ -102,7 +111,7 @@ ul.main-menu > li.menu-item:first-child {
         position: absolute;
         left: 0;
         z-index: 10007;
-        background-color: black;
+        background: linear-gradient(#1A1C45, #161CAC);
         border-bottom: 3px solid grey;
         right: 0;
         padding-bottom: 17px;
@@ -110,10 +119,10 @@ ul.main-menu > li.menu-item:first-child {
     }
 
     .main-nav .menu-item a {
-        margin: 10px 17px;
+        margin: 5px 17px;
         text-align: center;
         color: #fff;
-        font-size: 25px;
+        font-size: 24px;
     }
 
     .main-nav ul.main-menu {

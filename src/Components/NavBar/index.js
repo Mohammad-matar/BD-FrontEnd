@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 // import { useEffect } from "react";
 import { IoIosMenu, IoMdClose } from "react-icons/io";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../auth";
+// import { useNavigate } from "react-router-dom";
+import ahmadLogo from '../../images/badawi-logo.png'
+// import { useAuth } from "../../auth";
 import "./style.css";
 
 const Navbarmenu = () => {
-    const auth = useAuth()
+    // const auth = useAuth()
 
     const [isMenu, setisMenu] = useState(false);
     const [isResponsiveclose, setResponsiveclose] = useState(false);
@@ -22,22 +23,21 @@ const Navbarmenu = () => {
     } else {
         boxClass.push("");
     }
-    const navigate = useNavigate();
-    const handleClick = () => {
-        navigate("/login")
-    }
-    const handleLogout = () => {
-        auth.logout();
-        navigate("/")
-    }
+    // const navigate = useNavigate();
+    // const handleClick = () => {
+    //     navigate("/login")
+    // }
+    // const handleLogout = () => {
+    //     auth.logout();
+    //     navigate("/")
+    // }
     return (
         <div className="header">
             <div className="TitleName">
-                <h1> Zaynab </h1>
+                <h1> < img src={ahmadLogo} alt="badawi-logo" /> HMAD </h1>
             </div>
             <div>
                 <div className="header_container">
-                    <h1>Zaynab</h1>
                     <div className="header_menus">
                         <nav className="main-nav ">
                             {/* Responsive Menu Button */}
@@ -73,12 +73,18 @@ const Navbarmenu = () => {
                                     <a href="/#experience">Experience</a>
                                 </li>
                                 <li className="menu-item">
-                                    <a href="/#project">Projects</a>
+                                    <a href="/#project">Services</a>
                                 </li>
                                 <li className="menu-item">
-                                    <a href="/#contact">Contact Me</a>
+                                    <a href="/#Work">Work</a>
                                 </li>
-                                {auth.authorizationToken() ? <li className="menu-item" onClick={handleLogout}>
+                                <li className="menu-item">
+                                    <a href="/#Project">Project</a>
+                                </li>
+                                <li className="menu-item">
+                                    <a href="/#contact">Contact</a>
+                                </li>
+                                {/* {auth.authorizationToken() ? <li className="menu-item" onClick={handleLogout}>
                                     logout
                                 </li> :
                                     <li className="menu-item" onClick={handleClick}>
@@ -87,7 +93,7 @@ const Navbarmenu = () => {
 
                                         </p>
                                     </li>
-                                }
+                                } */}
 
                             </ul>
                         </nav>
