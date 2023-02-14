@@ -1,0 +1,69 @@
+.personalInfo_section {
+    padding-top: 5rem;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.personal_Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    gap: 5rem;
+    color: white;
+}
+
+.personalInfo_part1 {
+    width: 40%;
+    font-family: 'Poppins';
+}
+
+.personalInfo_title {
+    font-size: 60px;
+}
+
+.personalInfo_description {
+    font-size: 20px;
+    line-height: 2rem;
+}
+
+.personalInfo_pic img {
+    border-radius: 10rem;
+    max-width: 350px;
+}
+
+.personalInfo_part2 {
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.personalInfo_name {
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.585em;
+    font-size: 30px;
+    font-family: 'Poppins';
+    transform: rotate(90deg);
+}
+
+@media(max-width:800px) {
+    .personal_Container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .personalInfo_part1 {
+        width: 80%;
+    }
+
+    .personalInfo_part2 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .personalInfo_name {
+        transform: rotate(0deg);
+    }
+}
