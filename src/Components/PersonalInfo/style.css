@@ -66,4 +66,8 @@
     .personalInfo_name {
         transform: rotate(0deg);
     }
+
+    .personalInfo_pic img {
+        max-width: 300px;
+    }
 }

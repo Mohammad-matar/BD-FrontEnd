@@ -1,7 +1,7 @@
 .header {
     width: 100%;
     position: fixed;
-    background: linear-gradient(#1A1C45, #161CAC);
+    background: linear-gradient(to right, #1A1C45, #161CAC);
     z-index: 1000;
     display: flex;
     justify-content: space-around;
