@@ -36,6 +36,9 @@
 
 .aboutMe_container {
     width: 33%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
 }
 
 .about_description h1 {
@@ -47,6 +50,14 @@
     line-height: 180%;
 }
 
+.about_CV_btn {
+    background: linear-gradient(214.02deg, #2336AA 6.04%, #2336AA 92.95%);
+    border: 3px solid #2336AA;
+    border-radius: 50px;
+    padding: 10px 30px;
+    color: #fff;
+}
+
 @media (max-width:1163px) {
     .about_Container {
         display: flex;
@@ -54,11 +65,13 @@
         justify-content: center;
         align-items: center;
     }
+
     .aboutMe_container {
         width: 55%;
     }
-   
+
 }
+
 @media (max-width:500px) {
     .about_Container {
         display: flex;
@@ -66,17 +79,20 @@
         justify-content: center;
         align-items: center;
     }
+
     .aboutMe_container {
         width: 90%;
     }
+
     .aboutImage {
         max-width: 350px;
         border-radius: 12rem;
     }
+
     .about_top_pointer_img {
         width: 50%;
     }
-    
+
     .about_bot_pointer_img {
         width: 50%;
     }

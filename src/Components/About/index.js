@@ -17,6 +17,11 @@ export default function About() {
                         <h1>Bit about me</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. </p>
                     </div>
+                    <a href='www.youtube.com' target="_blank">
+                        <button className='about_CV_btn'>
+                            Preview CV
+                        </button>
+                    </a>
                 </div>
             </div>
         </section>
