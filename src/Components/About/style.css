@@ -1,4 +1,17 @@
+.servicesTitle {
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    color: #fff;
+}
+
 .about_Section {
+    display: flex;
+    justify-content: center;
     padding-top: 10rem;
     color: #fff;
     font-family: 'Poppins';
