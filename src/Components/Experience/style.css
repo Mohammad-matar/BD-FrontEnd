@@ -1,0 +1,82 @@
+.experience_Section {
+    margin: 0 auto;
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    border-radius: 45px;
+    width: 75%;
+    background: linear-gradient(180deg, #080D74 9.38%, rgba(8, 13, 116, 0) 100%);
+    max-width: 1500px;
+}
+
+.experience_container {
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+
+}
+
+.experience_Description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience_projectname_date {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.experience_work_description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.experience_Skills_styling {
+    display: flex;
+    gap: 10px;
+}
+
+.experiece_Skills_background {
+    background: #4E53C7;
+    border-radius: 2rem;
+    padding: 1px 10px;
+}
+
+@media (max-width:768px) {
+    .experience_Description {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .experience_projectname_date {
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    .experience_Description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .experience_projectname_date {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
