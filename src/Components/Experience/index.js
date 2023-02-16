@@ -8,7 +8,7 @@ export default function Experience() {
                 <h1>Work</h1>
                 <div className='experience_Description'>
                     <div className='experience_projectname_date'>
-                        <h1>
+                        <h1 className='experience_CompanyName'>
                             Bel3arabi
                         </h1>
                         <p>Oct 2021-Oct 2022</p>

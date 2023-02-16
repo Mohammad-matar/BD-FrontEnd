@@ -80,3 +80,9 @@
         width: 100%;
     }
 }
+@media (max-width:400px) {
+    .experience_container {
+        padding: 1rem;
+        margin-top: 1.3rem;
+    }
+}
