@@ -1,21 +1,44 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import mypic from '../../images/mypic.jpg'
 import "./style.css"
 
 export default function PersonalInfo() {
+    const [data, setData] = useState()
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(() => {
+        getall();
+        // setIsLoading();
+    }, []);
+
+    const getall = () => {
+        axios
+            .get("http://localhost:5000/personalinfo")
+            .then((res) => {
+                setData(res.data.data);
+                console.log(res.data.data)
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    };
     return (
         <section className='personalInfo_section' id='home'>
             <div className='personal_Container'>
-                <div className='personalInfo_part1'>
-                    <div className='personalInfo_title'>
-                        Full<br />
-                        stack web
-                        Developer
-                    </div>
-                    <div className='personalInfo_description'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan.
-                    </div>
-                </div>
+                {isLoading ? <>is Loading</> : data.map((personal) => {
+                    return (
+                        <div className='personalInfo_part1'>
+                            <div className='personalInfo_title'>
+                                {personal.title}
+                            </div>
+                            <div className='personalInfo_description'>
+                                {personal.description}        
+                            </div>
+                        </div>
+                    )
+                })}
+
 
                 <div className='personalInfo_part2'>
                     <div className='personalInfo_pic'>
