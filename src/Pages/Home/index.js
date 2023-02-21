@@ -5,6 +5,7 @@ import NavBar from "../../Components/NavBar"
 import PersonalInfo from '../../Components/PersonalInfo'
 import Service from '../../Components/Services'
 import Projects from '../../Components/Projects'
+import Contact from '../../Components/Contact'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Service />
       <Experience />
       <Projects />
+      <Contact />
     </>
   )
 }

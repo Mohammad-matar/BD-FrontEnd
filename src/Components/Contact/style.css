@@ -1,0 +1,130 @@
+.Contact_Section {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1500px;
+    padding-top: 67px;
+}
+
+.Contact_Page {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+}
+
+.contact_info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    align-items: center;
+}
+
+.contact_page_container {
+    background-color: #fff;
+    box-shadow: 0px 1.66367px 27.1733px 4.99101px rgba(0, 0, 0, 0.06);
+    width: 55%;
+    position: relative;
+    box-shadow: 0px 0px 5px 3px #080D74;
+    border-radius: 3rem;
+
+}
+
+.contact_container h1 {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 45.4736px;
+    line-height: 55px;
+    width: 20%;
+    color: #080D74;
+}
+
+
+.css-v4u5dn-MuiInputBase-root-MuiInput-root {
+    color: white;
+}
+
+.contact_container {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+}
+
+.css-dhbbiu {
+    padding: 0 !important;
+}
+
+.contact_inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.TextareaAutosize {
+    border: 0;
+    border-bottom: 1px solid black;
+    font-size: 16px;
+}
+
+.contact_btn {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.contact_btn button {
+    padding: 1rem 3rem;
+    background: #191018;
+    font-size: 1rem;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contact_rectangle_left {
+    position: absolute;
+    bottom: 0;
+    left: 13.5rem;
+    z-index: -1;
+}
+
+.contact_dots2 {
+    position: absolute;
+    right: 0;
+    top: 6rem;
+    z-index: -1;
+}
+
+@media (max-width: 1000px) {
+    .contact_info {
+        display: none;
+    }
+
+    .contact_dots2 {
+        display: none;
+    }
+
+    .contact_container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        gap: 0;
+        align-items: center;
+    }
+
+
+    .contact_page_container {
+        display: flex;
+        background: #ffffff;
+        box-shadow: 0px 1.66367px 27.1733px 4.99101px rgb(0 0 0 / 6%);
+        width: 100%;
+        border: 0;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 30px;
+    }
+
+}

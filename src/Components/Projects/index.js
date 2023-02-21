@@ -17,7 +17,7 @@ export default function LatestWork() {
             .get("http://localhost:5000/project")
             .then((res) => {
                 setData(res.data.data);
-                console.log(res.data.data)
+                // console.log(res.data.data)
                 setIsLoading(false);
             })
             .catch((err) => {
