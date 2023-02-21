@@ -15,7 +15,7 @@ export default function PersonalInfo() {
 
     const getall = async () => {
         await axios
-            .get("http://localhost:5000/personalinfo")
+            .get("https://badawi-api.onrender.com/personalinfo")
             .then((res) => {
                 setData(res.data.data[0]);
                 // console.log(res.data.data)

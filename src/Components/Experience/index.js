@@ -13,7 +13,7 @@ export default function Experience() {
 
     const getAll = async () => {
         await axios
-            .get("http://localhost:5000/experience")
+            .get("https://badawi-api.onrender.com/experience")
             .then((res) => {
                 setData(res.data.data)
                 // console.log(res.data.data)

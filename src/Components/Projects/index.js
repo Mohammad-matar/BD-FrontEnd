@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
 import Loading from "../Loading";
 import "./style.css";
 
@@ -14,7 +13,7 @@ export default function LatestWork() {
 
     const getall = () => {
         axios
-            .get("http://localhost:5000/project")
+            .get("https://badawi-api.onrender.com/project")
             .then((res) => {
                 setData(res.data.data);
                 // console.log(res.data.data)
@@ -24,10 +23,7 @@ export default function LatestWork() {
                 console.error(err);
             });
     };
-    // const navigate = useNavigate();
-    // const handleClick = (id) => {
-    //     navigate(``);
-    // };
+
     return (
         <div className="latestwork_container" id="project">
             <div className="servicesTitle">Project</div>

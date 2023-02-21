@@ -14,7 +14,7 @@ export default function About() {
     }, [])
     const getall = async () => {
         await axios
-            .get("http://localhost:5000/about")
+            .get("https://badawi-api.onrender.com/about")
             .then((res) => {
                 setData(res.data.data[0])
                 // console.log(res.data.data)

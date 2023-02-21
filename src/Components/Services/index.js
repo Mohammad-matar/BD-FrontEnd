@@ -14,7 +14,7 @@ export default function Service() {
     }, [])
     const getAll = async () => {
         await axios
-            .get("http://localhost:5000/services")
+            .get("https://badawi-api.onrender.com/services")
             .then((res) => {
                 setData(res.data.data)
                 // console.log(res.data.data)
