@@ -40,7 +40,7 @@
 
 .experience_Skills_styling {
     display: flex;
-    gap: 10px;
+    gap: 10px;   
 }
 
 .experiece_Skills_background {
@@ -50,6 +50,11 @@
 }
 
 @media (max-width:768px) {
+    .experience_Skills_styling {
+        display: flex;
+        gap: 10px; 
+        justify-content: center;  
+    }
     .experience_Description {
         display: flex;
         flex-direction: column;
@@ -67,6 +72,10 @@
 }
 
 @media (max-width:500px) {
+    .experience_Section{
+    width: 80%;
+
+    }
     .experience_Description {
         display: flex;
         flex-direction: column;

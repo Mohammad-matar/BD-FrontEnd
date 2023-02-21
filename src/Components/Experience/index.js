@@ -16,7 +16,7 @@ export default function Experience() {
             .get("http://localhost:5000/experience")
             .then((res) => {
                 setData(res.data.data)
-                console.log(res.data.data)
+                // console.log(res.data.data)
                 setIsLoading(false)
             })
             .catch((err) => {
@@ -40,7 +40,7 @@ export default function Experience() {
                             </div>
                             <div className='experience_work_description'>
                                 <p>{experience.description}</p>
-                                
+
                                 <div className='experience_Skills_styling'>
                                     <p className='experiece_Skills_background'>HTML</p>
                                     <p className='experiece_Skills_background'>CSS</p>

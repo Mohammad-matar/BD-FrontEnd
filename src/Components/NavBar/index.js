@@ -79,7 +79,7 @@ const Navbarmenu = () => {
                                     <a href="/#Work">Work</a>
                                 </li>
                                 <li className="menu-item">
-                                    <a href="/#Project">Project</a>
+                                    <a href="/#project">Project</a>
                                 </li>
                                 <li className="menu-item">
                                     <a href="/#contact">Contact</a>
