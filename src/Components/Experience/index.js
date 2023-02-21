@@ -1,79 +1,56 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import Loading from '../Loading';
 import "./style.css"
 
 export default function Experience() {
+    const [data, setData] = useState()
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(() => {
+        getAll();
+    }, [])
+
+    const getAll = async () => {
+        await axios
+            .get("http://localhost:5000/experience")
+            .then((res) => {
+                setData(res.data.data)
+                console.log(res.data.data)
+                setIsLoading(false)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
     return (
         <section className='experience_Section' id='experience'>
             <div className='experience_container'>
                 <h1>Work</h1>
-                <div className='experience_Description'>
-                    <div className='experience_projectname_date'>
-                        <h1 className='experience_CompanyName'>
-                            Bel3arabi
-                        </h1>
-                        <p>Oct 2021-Oct 2022</p>
-                    </div>
-                    <div className='experience_work_description'>
-                        <p>Workplace platform mobile app designed to provide long lasting feature.</p>
-
-                        <div className='experience_Skills_styling'>
-                            <p className='experiece_Skills_background'>HTML</p>
-                            <p className='experiece_Skills_background'>CSS</p>
-                            <p className='experiece_Skills_background'>JavaScript</p>
+                {isLoading ? <div>
+                    <Loading />
+                </div> : data.map((experience) => {
+                    return (
+                        <div className='experience_Description'>
+                            <div className='experience_projectname_date'>
+                                <h1 className='experience_CompanyName'>
+                                    {experience.title}
+                                </h1>
+                                <p>{experience.startDate}-{experience.endDate}</p>
+                            </div>
+                            <div className='experience_work_description'>
+                                <p>{experience.description}</p>
+                                
+                                <div className='experience_Skills_styling'>
+                                    <p className='experiece_Skills_background'>HTML</p>
+                                    <p className='experiece_Skills_background'>CSS</p>
+                                    <p className='experiece_Skills_background'>JavaScript</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div className='experience_Description'>
-                    <div className='experience_projectname_date'>
-                        <h1>
-                            Bel3arabi
-                        </h1>
-                        <p>Oct 2021-Oct 2022</p>
-                    </div>
-                    <div className='experience_work_description'>
-                        <p>Workplace platform mobile app designed to provide long lasting feature.</p>
+                    )
+                })}
 
-                        <div className='experience_Skills_styling'>
-                            <p className='experiece_Skills_background'>HTML</p>
-                            <p className='experiece_Skills_background'>CSS</p>
-                            <p className='experiece_Skills_background'>JavaScript</p>
-                        </div>
-                    </div>
-                </div>
-                <div className='experience_Description'>
-                    <div className='experience_projectname_date'>
-                        <h1>
-                            Bel3arabi
-                        </h1>
-                        <p>Oct 2021-Oct 2022</p>
-                    </div>
-                    <div className='experience_work_description'>
-                        <p>Workplace platform mobile app designed to provide long lasting feature.</p>
-
-                        <div className='experience_Skills_styling'>
-                            <p className='experiece_Skills_background'>HTML</p>
-                            <p className='experiece_Skills_background'>CSS</p>
-                            <p className='experiece_Skills_background'>JavaScript</p>
-                        </div>
-                    </div>
-                </div>
-                <div className='experience_Description'>
-                    <div className='experience_projectname_date'>
-                        <h1>
-                            Bel3arabi
-                        </h1>
-                        <p>Oct 2021-Oct 2022</p>
-                    </div>
-                    <div className='experience_work_description'>
-                        <p>Workplace platform mobile app designed to provide long lasting feature.</p>
-
-                        <div className='experience_Skills_styling'>
-                            <p className='experiece_Skills_background'>HTML</p>
-                            <p className='experiece_Skills_background'>CSS</p>
-                            <p className='experiece_Skills_background'>JavaScript</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     )
