@@ -98,8 +98,12 @@
 }
 
 @media (max-width: 1000px) {
-    .contact_info {
-        display: none;
+    .Contact_Section {
+        width: 50%;
+    }
+
+    .contact_container h1 {
+        width: 100%;
     }
 
     .contact_dots2 {
@@ -127,4 +131,9 @@
         padding: 15px 30px;
     }
 
+}
+@media (max-width:500px) {
+    .Contact_Section {
+        width: 80%;
+    }
 }

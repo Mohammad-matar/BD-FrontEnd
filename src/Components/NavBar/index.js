@@ -76,9 +76,6 @@ const Navbarmenu = () => {
                                     <a href="/#services">Services</a>
                                 </li>
                                 <li className="menu-item">
-                                    <a href="/#Work">Work</a>
-                                </li>
-                                <li className="menu-item">
                                     <a href="/#project">Project</a>
                                 </li>
                                 <li className="menu-item">
